@@ -30,6 +30,7 @@ namespace MauiMemory.Services
                 Shell.Current.Navigation.RemovePage(page);
             }
             GC.Collect();
+            GC.WaitForPendingFinalizers();
         }
 
         public async Task navigateToAsync(string route)

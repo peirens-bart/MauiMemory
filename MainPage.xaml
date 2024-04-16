@@ -20,7 +20,7 @@
                 SemanticProperties.Description="Hello, Maui dev team" />
 
             <Label
-                Text="Demo to show memory leak on Android"
+                x:Name="memTxt"
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Demo to show memory leak on Android" />

@@ -1,4 +1,5 @@
 ﻿using MauiMemory.Services;
+using System.Diagnostics;
 
 namespace MauiMemory
 {
@@ -10,6 +11,13 @@ namespace MauiMemory
             InitializeComponent();
             _navigation = navigation;
 
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            var totalMemory = GC.GetTotalMemory(true);
+            memTxt.Text = $"Memory: {totalMemory}";
         }
 
         private async void CounterBtn_Clicked(object sender, EventArgs e)
