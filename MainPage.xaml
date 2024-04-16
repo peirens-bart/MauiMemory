@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiMemory.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Hello, Maui dev team!"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                SemanticProperties.Description="Hello, Maui dev team" />
+
+            <Label
+                Text="Demo to show memory leak on Android"
+                Style="{StaticResource SubHeadline}"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Demo to show memory leak on Android" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Page 1" 
+                Clicked="CounterBtn_Clicked"/>
+            <Button
+                x:Name="CounterBtn2"
+                Text="Page 2" 
+                Clicked="CounterBtn2_Clicked"/>     
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
