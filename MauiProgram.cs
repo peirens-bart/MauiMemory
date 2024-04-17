@@ -39,7 +39,7 @@ namespace MauiMemory
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<Page1>();
             builder.Services.AddSingleton<Page2>();
-            builder.Services.AddSingleton<Page3>();
+            builder.Services.AddTransient<Page3>();
             return builder;
         }
     }
