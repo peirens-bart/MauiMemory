@@ -29,6 +29,7 @@ namespace MauiMemory
         public static MauiAppBuilder RegisterServices(this MauiAppBuilder builder)
         {
             builder.Services.AddSingleton<INavigationService, NavigationService>();
+            builder.Services.AddSingleton<ICounterService, CounterService>();
             return builder;
         }
 
@@ -38,6 +39,7 @@ namespace MauiMemory
             builder.Services.AddSingleton<MainPage>();
             builder.Services.AddSingleton<Page1>();
             builder.Services.AddSingleton<Page2>();
+            builder.Services.AddSingleton<Page3>();
             return builder;
         }
     }

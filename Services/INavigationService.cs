@@ -2,6 +2,6 @@
 {
     public interface INavigationService
     {
-        Task navigateToAsync(string route);
+        Task navigateToAsync(string route, bool clearStack = true);
     }
 }

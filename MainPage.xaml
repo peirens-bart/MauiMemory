@@ -7,12 +7,6 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
-                Source="dotnet_bot.png"
-                HeightRequest="185"
-                Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
-
             <Label
                 Text="Hello, Maui dev team!"
                 Style="{StaticResource Headline}"
@@ -32,7 +26,11 @@
             <Button
                 x:Name="CounterBtn2"
                 Text="Page 2" 
-                Clicked="CounterBtn2_Clicked"/>     
+                Clicked="CounterBtn2_Clicked"/>
+            <Button
+    x:Name="CounterBtn3"
+    Text="Page 3" 
+    Clicked="CounterBtn3_Clicked"/>
         </VerticalStackLayout>
     </ScrollView>
 

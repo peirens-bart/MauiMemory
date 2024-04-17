@@ -7,6 +7,7 @@ namespace MauiMemory.Services
         internal const string Home = "home";
         internal const string Page1 = "page1";
         internal const string Page2 = "page2";
+        internal const string Page3 = "page3";
         private readonly IServiceProvider _services;
 
         public NavigationService(IServiceProvider service)
@@ -19,6 +20,7 @@ namespace MauiMemory.Services
             Routing.RegisterRoute(Home, typeof(MainPage));
             Routing.RegisterRoute(Page1, typeof(Pages.Page1));
             Routing.RegisterRoute(Page2, typeof(Pages.Page2));
+            Routing.RegisterRoute(Page3, typeof(Pages.Page3));
         }
 
         public void ClearStack()
@@ -33,9 +35,12 @@ namespace MauiMemory.Services
             GC.WaitForPendingFinalizers();
         }
 
-        public async Task navigateToAsync(string route)
+        public async Task navigateToAsync(string route, bool clearStack = true)
         {
-            ClearStack();
+            if (clearStack)
+            {
+                ClearStack();
+            }
             await Shell.Current.GoToAsync(route, false);
 
         }

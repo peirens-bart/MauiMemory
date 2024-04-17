@@ -29,6 +29,11 @@ namespace MauiMemory
         {
             await _navigation.navigateToAsync(NavigationService.Page2);
         }
+
+        private async void CounterBtn3_Clicked(object sender, EventArgs e)
+        {
+            await _navigation.navigateToAsync(NavigationService.Page3);
+        }
     }
 
 }
