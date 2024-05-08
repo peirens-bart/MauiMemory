@@ -6,7 +6,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new Pages.Page4();// new AppShell();
         }
     }
 }
